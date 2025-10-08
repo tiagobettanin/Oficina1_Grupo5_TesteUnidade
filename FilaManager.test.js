@@ -53,7 +53,7 @@ describe('Gerenciamento da Fila Virtual', () => {
 
   it('não deve adicionar um usuário se o nome for vazio ou inválido', () => {
     adicionarUsuario('');
-    adicionarUsuario('   '); // Espaços em branco
+    adicionarUsuario('   ');
     adicionarUsuario(null);
     adicionarUsuario(undefined);
     expect(obterFila().length).toBe(0);
