@@ -1,4 +1,3 @@
-// FilaManager.test.js
 const { 
   adicionarUsuario, 
   chamarProximo, 
@@ -7,7 +6,6 @@ const {
   limparFila 
 } = require('./FilaManager');
 
-// Roda antes de cada teste para garantir uma fila limpa e isolamento
 beforeEach(() => {
   limparFila();
 });
