@@ -1,0 +1,14 @@
+{
+  "name": "sistema-fila-virtual-testes",
+  "version": "1.0.0",
+  "description": "Testes de unidade para o módulo de gerenciamento de fila do projeto da Oficina 1.",
+  "main": "FilaManager.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Tiago Navarro Bettanin e Estevan Garrido Hernandes Sastre",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
