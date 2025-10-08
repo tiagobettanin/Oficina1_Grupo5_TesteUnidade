@@ -25,7 +25,7 @@ O arquivo `FilaManager.test.js` foi projetado para cobrir os principais cenário
 * **Adição de usuário:** Verifica se um usuário é adicionado corretamente e se o tamanho da fila aumenta.
 * **Adição múltipla e ordem FIFO:** Garante que múltiplos usuários são adicionados na ordem correta (o primeiro a entrar deve ser o primeiro da lista).
 * **Chamada do próximo:** Testa a remoção do primeiro usuário da fila, validando se o usuário correto é retornado e se a fila é atualizada como esperado.
-* ** robustez da chamada:** Valida o comportamento do sistema ao tentar remover um item de uma fila que já está vazia, esperando um retorno `null`.
+* **Robustez da chamada:** Valida o comportamento do sistema ao tentar remover um item de uma fila que já está vazia, esperando um retorno `null`.
 * **Consulta de posição:** Confere se a busca de posição retorna o número correto para um usuário específico.
 * **Consulta de usuário inexistente:** Verifica se a busca por um usuário que não está na fila falha de maneira controlada (retornando `-1`).
 * **Validação de entrada:** Garante que entradas inválidas (nomes vazios, nulos ou com apenas espaços) não sejam adicionadas à fila, mantendo a integridade dos dados.
@@ -68,3 +68,4 @@ Tests:       7 passed, 7 total
 Snapshots:   0 total
 Time:        ...s
 ```
+
