@@ -68,3 +68,29 @@ Tests:       7 passed, 7 total
 Snapshots:   0 total
 Time:        ...s
 ```
+## Fluxograma da Lógica (FilaManager)
+
+O diagrama abaixo ilustra o funcionamento das principais funções implementadas no módulo de gerenciamento:
+
+```mermaid
+graph TD
+    subgraph "Lógica do FilaManager.js"
+        Start((Início)) --> Action{Escolha da Ação}
+
+        %% Fluxo de Adicionar
+        Action -- "adicionarUsuario(nome)" --> CheckValid{Nome Válido?}
+        CheckValid -- "Não (Vazio/Nulo)" --> Ignore[Ignorar]
+        CheckValid -- "Sim" --> Push[Adicionar ao Final da Fila]
+
+        %% Fluxo de Chamar
+        Action -- "chamarProximo()" --> CheckEmpty{Fila Vazia?}
+        CheckEmpty -- "Sim" --> RetNull[Retornar null]
+        CheckEmpty -- "Não" --> Shift[Remover o 1º da Fila]
+        Shift --> RetUser[Retornar Nome do Usuário]
+
+        %% Fluxo de Posição
+        Action -- "obterPosicao(nome)" --> Find[Buscar Índice no Array]
+        Find --> CalcPos{Encontrou?}
+        CalcPos -- "Sim" --> RetPos[Retornar Índice + 1]
+        CalcPos -- "Não" --> RetNeg[Retornar -1]
+    end
